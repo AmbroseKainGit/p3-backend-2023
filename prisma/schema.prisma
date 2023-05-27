@@ -26,3 +26,19 @@ model Product {
   categoryId  Int
 }
 
+model User {
+  id        Int      @id @default(autoincrement())
+  name      String
+  email     String   @unique
+  password  String
+  role      String
+  orders    Order[]  // Agrega esta línea
+}
+
+model Order {
+  id         Int      @id @default(autoincrement())
+  date       DateTime @default(now())
+  status     String
+  waiter     User     @relation(fields: [waiterId], references: [id])
+  waiterId   Int
+}
