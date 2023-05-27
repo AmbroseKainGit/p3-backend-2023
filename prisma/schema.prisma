@@ -41,4 +41,15 @@ model Order {
   status     String
   waiter     User     @relation(fields: [waiterId], references: [id])
   waiterId   Int
+  table      Table    @relation(fields: [tableId], references: [id])
+  tableId    Int
+}
+
+model Table {
+  id        Int      @id @default(autoincrement())
+  number    Int
+  capacity  Int
+  occupied  Boolean
+  section   String?
+  orders    Order[]
 }
