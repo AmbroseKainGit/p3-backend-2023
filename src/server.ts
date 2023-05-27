@@ -1,11 +1,15 @@
 import express from "express";
 import dotenv from "dotenv";
-import { defaultErrorHandler } from "./Utils/handler";
-import { categoryRouter } from "./Routes/category";
+import cors from "cors";
+import morgan from "morgan";
+import { defaultErrorHandler } from "./Utils/handler.js";
+import { categoryRouter } from "./Routes/category.js";
 dotenv.config();
 const app = express();
 const { SERVER_PORT } = process.env;
-
+app.use(cors());
+app.use(express.json());
+app.use(morgan("dev"));
 app.use(defaultErrorHandler);
 app.use('/categories', categoryRouter);
 app.listen(SERVER_PORT, () => {
