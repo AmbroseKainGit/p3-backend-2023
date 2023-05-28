@@ -2,7 +2,13 @@ import { Router } from 'express';
 import { errorChecked } from '../Utils/handler.js';
 import { check } from 'express-validator/src/middlewares/validation-chain-builders.js';
 import { validateFields } from '../Utils/fieldValidator.js';
-import { createOrder, deleteOrder, getAllOrders, getOrderById, updateOrder } from '../Controllers/order.controller.js';
+import {
+    createOrder,
+    deleteOrder,
+    getAllOrders,
+    getOrderById,
+    updateOrder
+} from '../Controllers/order.controller.js';
 
 const orderRouter = Router();
 
