@@ -6,6 +6,7 @@ import { defaultErrorHandler } from "./Utils/handler.js";
 import { categoryRouter } from "./Routes/category.js";
 import { productRouter } from "./Routes/product.js";
 import { userRouter } from "./Routes/user.js";
+import { tableRouter } from "./Routes/table.js";
 
 dotenv.config();
 const app = express();
@@ -17,6 +18,7 @@ app.use(defaultErrorHandler);
 app.use('/categories', categoryRouter);
 app.use('/products', productRouter);
 app.use('/users', userRouter);
+app.use('/tables', tableRouter);
 app.listen(SERVER_PORT, () => {
   console.log(`Restaurant API listening on: ${SERVER_PORT}`);
 });

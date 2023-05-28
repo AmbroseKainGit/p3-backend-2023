@@ -1,6 +1,7 @@
 import { Router } from 'express';
 import { errorChecked } from '../Utils/handler.js';
 import { check } from 'express-validator/src/middlewares/validation-chain-builders.js';
+import { validateFields } from '../Utils/fieldValidator.js';
 import {
     getAllUsers,
     createUser,
@@ -8,7 +9,6 @@ import {
     updateUser,
     deleteUser,
 } from "../Controllers/user.controller.js";
-import { validateFields } from '../Utils/fieldValidator.js';
 
 const userRouter = Router();
 

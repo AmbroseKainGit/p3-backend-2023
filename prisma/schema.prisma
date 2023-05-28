@@ -46,9 +46,8 @@ model Order {
 
 model Table {
   id       Int     @id @default(autoincrement())
-  number   Int
+  name     String
   capacity Int
-  occupied Boolean
-  section  String?
+  occupied Boolean @default(false)
   orders   Order[]
 }
