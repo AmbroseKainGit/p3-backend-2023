@@ -5,6 +5,7 @@ import morgan from "morgan";
 import { defaultErrorHandler } from "./Utils/handler.js";
 import { categoryRouter } from "./Routes/category.js";
 import { productRouter } from "./Routes/product.js";
+import { userRouter } from "./Routes/user.js";
 
 dotenv.config();
 const app = express();
@@ -15,6 +16,7 @@ app.use(morgan("dev"));
 app.use(defaultErrorHandler);
 app.use('/categories', categoryRouter);
 app.use('/products', productRouter);
+app.use('/users', userRouter);
 app.listen(SERVER_PORT, () => {
   console.log(`Restaurant API listening on: ${SERVER_PORT}`);
 });

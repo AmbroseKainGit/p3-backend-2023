@@ -11,8 +11,8 @@ datasource db {
 }
 
 model Category {
-  id       Int         @id @default(autoincrement())
-  name     String      @unique
+  id       Int       @id @default(autoincrement())
+  name     String    @unique
   products Product[]
 }
 
@@ -26,29 +26,29 @@ model Product {
 }
 
 model User {
-  id        Int      @id @default(autoincrement())
-  name      String
-  email     String   @unique
-  password  String
-  role      String
-  orders    Order[]  // Agrega esta línea
+  id       Int     @id @default(autoincrement())
+  name     String
+  email    String  @unique
+  password String
+  role     String?  @default("waiter") 
+  orders   Order[]
 }
 
 model Order {
-  id         Int      @id @default(autoincrement())
-  date       DateTime @default(now())
-  status     String
-  waiter     User     @relation(fields: [waiterId], references: [id])
-  waiterId   Int
-  table      Table    @relation(fields: [tableId], references: [id])
-  tableId    Int
+  id       Int      @id @default(autoincrement())
+  date     DateTime @default(now())
+  status   String
+  waiter   User     @relation(fields: [waiterId], references: [id])
+  waiterId Int
+  table    Table    @relation(fields: [tableId], references: [id])
+  tableId  Int
 }
 
 model Table {
-  id        Int      @id @default(autoincrement())
-  number    Int
-  capacity  Int
-  occupied  Boolean
-  section   String?
-  orders    Order[]
+  id       Int     @id @default(autoincrement())
+  number   Int
+  capacity Int
+  occupied Boolean
+  section  String?
+  orders   Order[]
 }
