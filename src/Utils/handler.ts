@@ -1,5 +1,6 @@
 import { Prisma } from "@prisma/client";
 import { ErrorRequestHandler, RequestHandler, Request, Response, NextFunction } from "express";
+const NOT_FOUND = 'NotFoundError';
 
 enum ErrorCode {
   UniqueConstraintViolation = 'P2002',
@@ -32,9 +33,9 @@ export const errorChecked = (handler: RequestHandler): RequestHandler => {
 
         }
         if (error.code === ErrorCode.RecordNotFound) {
-          const formattedMessage = errorMessages[error.code].replace('%s', (error.meta?.cause || '') as string);
+          const formattedMessage = error.name === NOT_FOUND ? error.message : errorMessages[error.code].replace('%s', (error.meta?.cause || '') as string);
           res.status(500).json({
-            error: formattedMessage,
+            error: formattedMessage
           });
         }
       }
