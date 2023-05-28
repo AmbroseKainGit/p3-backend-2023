@@ -13,7 +13,11 @@ export const errorChecked = (handler: RequestHandler): RequestHandler => {
       await handler(req, res, next);
     } catch (e) {
       if (e instanceof Prisma.PrismaClientKnownRequestError) {
-        // The .code property can be accessed in a type-safe manner
+        if (e.code === 'P2025') {
+          res.status(500).json({
+            error: e.meta?.cause,
+          });
+        }
         if (e.code === 'P2002') {
           res.status(500).json({
             error: `There is a unique constraint violation in the fields: ${e.meta?.target}`,
