@@ -1,0 +1,714 @@
+_type: export
+__export_format: 4
+__export_date: 2023-05-28T13:33:42.600Z
+__export_source: insomnia.desktop.app:v2023.2.2
+resources:
+  - _id: req_b79276eb84814d51abe8cb1f64a00efa
+    parentId: fld_5be8c7c60f5e4abb97cc895dadff58f3
+    modified: 1685279308480
+    created: 1685279244738
+    url: "{{baseUrl}}/orders"
+    name: /orders (get all Orders)
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1685232695774
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_5be8c7c60f5e4abb97cc895dadff58f3
+    parentId: wrk_e5c050a8ab9e4c6fb8de85eb05d5aa7e
+    modified: 1685279241538
+    created: 1685279241538
+    name: Orders
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1685279241538
+    _type: request_group
+  - _id: wrk_e5c050a8ab9e4c6fb8de85eb05d5aa7e
+    parentId: null
+    modified: 1685225008606
+    created: 1685225008606
+    name: Restaurant API
+    description: ""
+    scope: collection
+    _type: workspace
+  - _id: req_57e97b2cd51f413180ff90118133afaf
+    parentId: fld_5be8c7c60f5e4abb97cc895dadff58f3
+    modified: 1685279511920
+    created: 1685279262282
+    url: "{{baseUrl}}/orders"
+    name: /orders (Create New Order)
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+          "status": "In Progress",
+          "waiterId": 2,
+        	"tableId": 1
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication: {}
+    metaSortKey: -1685232695742.75
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_496f1b5ba8d24ee89e6c79efbbfad31e
+    parentId: fld_5be8c7c60f5e4abb97cc895dadff58f3
+    modified: 1685279902574
+    created: 1685279268460
+    url: "{{baseUrl}}/orders/2"
+    name: /orders/:id (Get order By Id)
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1685232695711.5
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_7b1ddf6ecfdc40e2991263f2dc4d8a29
+    parentId: fld_5be8c7c60f5e4abb97cc895dadff58f3
+    modified: 1685279921635
+    created: 1685279272949
+    url: "{{baseUrl}}/orders/2"
+    name: /orders/:id (Delete order)
+    description: ""
+    method: DELETE
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1685232695686.5
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_5f1ad7fe96f444869044d9df5f5edb0c
+    parentId: fld_5be8c7c60f5e4abb97cc895dadff58f3
+    modified: 1685280047031
+    created: 1685279257295
+    url: "{{baseUrl}}/orders/1"
+    name: /orders/:id (Update order)
+    description: ""
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+          "status": "Done"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication: {}
+    metaSortKey: -1685232695680.25
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_34e1bcc5e0f04525be4e9d6be82a76e0
+    parentId: fld_f7b220bacba542f4a9c92f1936e7bd57
+    modified: 1685279313748
+    created: 1685277444975
+    url: "{{baseUrl}}/tables"
+    name: /tables (get all tables)
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1685232695780.25
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_f7b220bacba542f4a9c92f1936e7bd57
+    parentId: wrk_e5c050a8ab9e4c6fb8de85eb05d5aa7e
+    modified: 1685277392932
+    created: 1685277392932
+    name: Tables
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1685277392932
+    _type: request_group
+  - _id: req_315f4930c30642be87143112646d0eb9
+    parentId: fld_f7b220bacba542f4a9c92f1936e7bd57
+    modified: 1685279317224
+    created: 1685277448162
+    url: "{{baseUrl}}/tables"
+    name: /tables (Create New tables)
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+          "name": "Bar C1",
+          "capacity": 20
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication: {}
+    metaSortKey: -1685232695730.25
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_3fc1cc2753774a1c9ad2ced4c3e24883
+    parentId: fld_f7b220bacba542f4a9c92f1936e7bd57
+    modified: 1685277529455
+    created: 1685277455147
+    url: "{{baseUrl}}/tables/1"
+    name: /tables/:id (Get table By Id)
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1685232695705.25
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_82eecfab3cb04412bbfb707a70fcdac9
+    parentId: fld_f7b220bacba542f4a9c92f1936e7bd57
+    modified: 1685277540459
+    created: 1685277451577
+    url: "{{baseUrl}}/tables/1"
+    name: /tables/:id (Delete table)
+    description: ""
+    method: DELETE
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1685232695680.25
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_466b8e2de0804d38ad87f14cb1dc3ca2
+    parentId: fld_f7b220bacba542f4a9c92f1936e7bd57
+    modified: 1685279253677
+    created: 1685277459019
+    url: "{{baseUrl}}/tables/1"
+    name: /tables/:id (Update table)
+    description: ""
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+          "name": "Bar C2",
+          "capacity": 30
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication: {}
+    metaSortKey: -1685232695630.25
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_c42fb9cf0afa4d68b4c82f3c27232327
+    parentId: fld_32b78afe511841afa879b54c12426753
+    modified: 1685275648117
+    created: 1685275605212
+    url: "{{baseUrl}}/users"
+    name: /users (get all users)
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1685232695792.75
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_32b78afe511841afa879b54c12426753
+    parentId: wrk_e5c050a8ab9e4c6fb8de85eb05d5aa7e
+    modified: 1685275594166
+    created: 1685275594166
+    name: Users
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1685275594166
+    _type: request_group
+  - _id: req_45f66743c4b14fb186979bebe4f57da6
+    parentId: fld_32b78afe511841afa879b54c12426753
+    modified: 1685276687420
+    created: 1685275616261
+    url: "{{baseUrl}}/users"
+    name: /users (Create New User)
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+          "name": "Cristian",
+          "email": "cmceballos89@gmail.com",
+          "password": "not_safe_pass_xd"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication: {}
+    metaSortKey: -1685232695742.75
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_d90e436e8d85417dbda5ce3e8f51dfad
+    parentId: fld_32b78afe511841afa879b54c12426753
+    modified: 1685276703861
+    created: 1685276226488
+    url: "{{baseUrl}}/users/1"
+    name: /users/:id (Delete User)
+    description: ""
+    method: DELETE
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1685232695642.75
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_220d9d8ca7d044d69bdd7947e041ae4c
+    parentId: fld_32b78afe511841afa879b54c12426753
+    modified: 1685277402806
+    created: 1685275866608
+    url: "{{baseUrl}}/users/1"
+    name: /users/:id (Get User By Id)
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1685232695617.75
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_394d2c2a842640cdb784bacdbfa8e29e
+    parentId: fld_32b78afe511841afa879b54c12426753
+    modified: 1685276749467
+    created: 1685276711845
+    url: "{{baseUrl}}/users/2"
+    name: /users/:id (Update User)
+    description: ""
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+          "name": "Cristian",
+          "email": "cmceballos89@gmail.com",
+          "password": "safer_pass_not_really"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication: {}
+    metaSortKey: -1685232695592.75
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_b013abeff9db4adbad1fdbff51971175
+    parentId: fld_980add046b0644b591e2d0def7004bef
+    modified: 1685279325838
+    created: 1685235264218
+    url: "{{baseUrl}}/products"
+    name: /products (get all products)
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1685232695817.75
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_980add046b0644b591e2d0def7004bef
+    parentId: wrk_e5c050a8ab9e4c6fb8de85eb05d5aa7e
+    modified: 1685235240295
+    created: 1685235240295
+    name: Products
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1685235240295
+    _type: request_group
+  - _id: req_57d081c63e254118851464d9da14fe0f
+    parentId: fld_980add046b0644b591e2d0def7004bef
+    modified: 1685272573292
+    created: 1685272116234
+    url: "{{baseUrl}}/products"
+    name: /products (Create New Product)
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+          "name": "Sea Food Platter",
+          "price": 10.99,
+          "categoryId": 1,
+        	"description": "12 Piece sushi"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication: {}
+    metaSortKey: -1685232695767.75
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_68fb34a0d32844e9b6fd57808f3894dd
+    parentId: fld_980add046b0644b591e2d0def7004bef
+    modified: 1685272164889
+    created: 1685272157974
+    url: "{{baseUrl}}/products/1"
+    name: /products/:id (Get Product By Id)
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1685232695717.75
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_fd8e2b1e945c420db081ab9a9b586069
+    parentId: fld_980add046b0644b591e2d0def7004bef
+    modified: 1685273272656
+    created: 1685273262177
+    url: "{{baseUrl}}/products/1"
+    name: /product/:id (Delete Product)
+    description: ""
+    method: DELETE
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1685232695692.75
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_e92676ab4bd24b2eba5f9b1e213b8aa5
+    parentId: fld_980add046b0644b591e2d0def7004bef
+    modified: 1685273147372
+    created: 1685273130069
+    url: "{{baseUrl}}/products/1"
+    name: /product/:id (Update Product)
+    description: ""
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+          "name": "Sea Food Platter",
+          "price": 10.99,
+          "categoryId": 4,
+        	"description": "12 Piece sushi"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication: {}
+    metaSortKey: -1685232695667.75
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_81deb763f9374d11a13db2a81f048958
+    parentId: fld_d582bcca557e4653be273a7b6bc17c27
+    modified: 1685226605325
+    created: 1685225063800
+    url: "{{baseUrl}}/categories"
+    name: /categories (get all categories)
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1685225063800
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_d582bcca557e4653be273a7b6bc17c27
+    parentId: wrk_e5c050a8ab9e4c6fb8de85eb05d5aa7e
+    modified: 1685225062386
+    created: 1685225062386
+    name: Categories
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1685225062386
+    _type: request_group
+  - _id: req_124ef72d53484509a5fbe4ff31e02d69
+    parentId: fld_d582bcca557e4653be273a7b6bc17c27
+    modified: 1685234677954
+    created: 1685226688503
+    url: "{{baseUrl}}/categories/2"
+    name: /categories/:id (Get Category By Id)
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1684438035846.5
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_ca4c050f489c445e9c9d0d996d20eb39
+    parentId: fld_d582bcca557e4653be273a7b6bc17c27
+    modified: 1685277333932
+    created: 1685226767001
+    url: "{{baseUrl}}/categories"
+    name: /categories (Create New Categories)
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"name": "Entrada"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication: {}
+    metaSortKey: -1684044521869.75
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_02cd45e8c50f41078c1583a97c33d3c3
+    parentId: fld_d582bcca557e4653be273a7b6bc17c27
+    modified: 1685234951692
+    created: 1685232234180
+    url: "{{baseUrl}}/categories/1"
+    name: /categories/:id (Update Category)
+    description: ""
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"name": "Main Course"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication: {}
+    metaSortKey: -1683847764881.375
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_a1442c0f7f4f4d41858b3486395ab211
+    parentId: fld_d582bcca557e4653be273a7b6bc17c27
+    modified: 1685232469744
+    created: 1685232454858
+    url: "{{baseUrl}}/categories/3"
+    name: /categories/:id (Delete Category)
+    description: ""
+    method: DELETE
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1683749386387.1875
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: env_ec4b173629a01f4b592d60652f5b13d1e62f8e9d
+    parentId: wrk_e5c050a8ab9e4c6fb8de85eb05d5aa7e
+    modified: 1685225008612
+    created: 1685225008612
+    name: Base Environment
+    data: {}
+    dataPropertyOrder: null
+    color: null
+    isPrivate: false
+    metaSortKey: 1685225008612
+    _type: environment
+  - _id: jar_ec4b173629a01f4b592d60652f5b13d1e62f8e9d
+    parentId: wrk_e5c050a8ab9e4c6fb8de85eb05d5aa7e
+    modified: 1685225008613
+    created: 1685225008613
+    name: Default Jar
+    cookies: []
+    _type: cookie_jar
+  - _id: spc_dee2cde8c79e4d8192fd6a197ad36956
+    parentId: wrk_e5c050a8ab9e4c6fb8de85eb05d5aa7e
+    modified: 1685225008607
+    created: 1685225008607
+    fileName: Restaurant API
+    contents: ""
+    contentType: yaml
+    _type: api_spec
+  - _id: env_8436c0c651604a30af4b96569351b6ea
+    parentId: env_ec4b173629a01f4b592d60652f5b13d1e62f8e9d
+    modified: 1685277498796
+    created: 1685225013993
+    name: Restaurant Env
+    data:
+      baseUrl: http://localhost:3000
+      productsPrefix: products
+    dataPropertyOrder:
+      "&":
+        - baseUrl
+        - productsPrefix
+    color: "#1f40c1"
+    isPrivate: false
+    metaSortKey: 1685225013993
+    _type: environment
